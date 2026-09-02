@@ -1,0 +1,1 @@
+This repository contains the source for the Paltheon landing site — a static HTML/CSS site with no build step, deployed via GitHub Pages, introducing a privacy-first iOS gym tracking app that keeps all workout data on the user's device.
