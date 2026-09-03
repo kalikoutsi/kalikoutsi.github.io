@@ -91,10 +91,6 @@ svg {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
   color: var(--text);
 }
 
@@ -109,6 +105,24 @@ svg {
   border-radius: 8px;
   background: linear-gradient(160deg, var(--accent-strong), var(--accent));
   flex-shrink: 0;
+}
+
+/* App icon image (used on the company page and the GymTracker page) */
+
+.icon-img {
+  display: block;
+  border-radius: 22%;
+  border: 1px solid var(--border);
+}
+
+.icon-img--sm {
+  width: 56px;
+  height: 56px;
+}
+
+.icon-img--lg {
+  width: 96px;
+  height: 96px;
 }
 
 nav.site-nav {
@@ -209,6 +223,131 @@ h1 {
 .cta-note {
   color: var(--text-faint);
   font-size: 0.9rem;
+}
+
+/* Store badge (disabled "coming soon" state — plain HTML/CSS, not Apple artwork) */
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-faint);
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.store-badge-glyph {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, var(--border), var(--bg-elevated));
+  flex-shrink: 0;
+}
+
+.store-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.store-badge-eyebrow {
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.store-badge-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* Company hero (index.html) */
+
+.company-hero {
+  padding: 104px 0 64px;
+  text-align: center;
+}
+
+.company-hero .wrap {
+  max-width: 640px;
+}
+
+.company-hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+}
+
+.company-hero p.lede {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 46ch;
+  margin: 0 auto;
+}
+
+/* Apps grid (company page) */
+
+.apps-section {
+  padding: 24px 0 100px;
+}
+
+.apps-section .wrap {
+  max-width: 640px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.app-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.app-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.app-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.app-card .app-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  align-self: flex-start;
+}
+
+/* GymTracker hero identity row */
+
+.hero-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.hero-icon-row .eyebrow {
+  margin-bottom: 0;
 }
 
 /* Phone mockup */
