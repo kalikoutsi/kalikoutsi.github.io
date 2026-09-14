@@ -596,3 +596,31 @@ h1 {
 .content-page strong {
   color: var(--text);
 }
+
+/* The GymTracker page's legal footer block — its privacy policy and terms live on their
+   own pages (easy to edit, and one set per app), and this is where the app page points at
+   them. Deliberately quiet: it sits after the waitlist call to action, not competing with it. */
+.app-legal {
+  padding: 3rem 0 4rem;
+  border-top: 1px solid var(--border);
+}
+.app-legal h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.6rem;
+}
+.app-legal p {
+  margin: 0 0 0.75rem;
+  max-width: 60ch;
+}
+.app-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.app-legal-links a {
+  font-weight: 600;
+}
+.app-legal-note {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
