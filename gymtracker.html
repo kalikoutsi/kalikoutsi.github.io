@@ -1,143 +1,413 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GymTracker — Kalikoutsi</title>
-<meta name="description" content="GymTracker is a privacy-first gym tracking app for iOS, from Kalikoutsi. An avatar that evolves with your real progress. 413 exercises, research-backed programs, and your data never leaves your phone.">
+<title>GymTracker: a private workout log for iPhone | Kalikoutsi</title>
+<meta name="description" content="GymTracker is a workout log for iPhone from Kalikoutsi. Log sets, plan your weeks, see your progress and grow a companion. Everything stays on your phone: no account, no ads, no tracking.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230b6b5c'/%3E%3Cpath d='M12 9v14M21.5 9l-7 7 7 7' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Kalikoutsi — Home">
-      <span class="brand-mark" aria-hidden="true"></span>
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9"/><path d="M12 9v14M21.5 9l-7 7 7 7"/></svg>
+      <span>Kalikoutsi</span>
     </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Kalikoutsi</a>
-      <a href="gymtracker.html" aria-current="page">GymTracker</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#apps">Apps</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="hero">
+<main id="main">
+
+  <!-- 1. The first screen: what it is, who it is for, what it does not do. -->
+  <section class="app-hero" aria-labelledby="app-title">
     <div class="wrap">
-      <div>
-        <div class="hero-icon-row">
-          <img class="icon-img icon-img--lg" src="gymtracker-icon.png" width="256" height="256" alt="GymTracker app icon">
-          <span class="eyebrow">A Kalikoutsi app</span>
-        </div>
-        <h1>Your progress, embodied.</h1>
-        <p class="lede">
-          GymTracker tracks your workouts and grows an avatar that evolves with your real,
-          measured progress — while every rep, set, and body metric stays on your phone.
-        </p>
-        <div class="cta-row">
-          <div class="store-badge" aria-disabled="true" role="img" aria-label="Coming soon to the App Store">
-            <span class="store-badge-glyph" aria-hidden="true"></span>
-            <span class="store-badge-text">
-              <span class="store-badge-eyebrow">Coming soon to the</span>
-              <span class="store-badge-title">App Store</span>
-            </span>
+      <a class="crumb" href="index.html#apps"><span aria-hidden="true">&larr;</span> All apps</a>
+      <div class="app-hero-grid">
+        <div>
+          <div class="app-title rise">
+            <img src="gymtracker-icon.png" width="192" height="192" alt="GymTracker app icon">
+            <h1 id="app-title">GymTracker</h1>
           </div>
-          <a class="btn btn-primary" href="mailto:support@kalikoutsi.com?subject=GymTracker%20waitlist">
-            Join the waitlist
-          </a>
+          <p class="lede rise" style="--i:1">
+            A simple workout log for iPhone. Log your sets, plan your weeks and see your progress.
+            Everything you enter stays on your phone.
+          </p>
+          <p class="status rise" style="--i:2">In development &middot; Coming soon to the App Store</p>
+          <div class="rise" style="--i:3">
+            <a class="btn" href="mailto:support@kalikoutsi.com?subject=GymTracker%20launch">Email me when it launches</a>
+            <p class="cta-note">This opens your email app. We will write once, when the app is out.</p>
+          </div>
         </div>
-        <p class="cta-note">No account. No spam. Just a note when we launch.</p>
+
+        <aside class="glance rise" style="--i:2" aria-labelledby="glance-title">
+          <h2 id="glance-title">At a glance</h2>
+          <dl>
+            <div>
+              <dt>What it is</dt>
+              <dd>An app to log your gym workouts, plan your training and see how it adds up.</dd>
+            </div>
+            <div>
+              <dt>Who it is for</dt>
+              <dd>Anyone who lifts weights, does cardio, or both. At a gym, at home or on the road. New or experienced.</dd>
+            </div>
+            <div>
+              <dt>Where your data lives</dt>
+              <dd>On your phone. There is no account and no server.</dd>
+            </div>
+            <div>
+              <dt>What it does not do</dt>
+              <dd>No ads. No tracking. No social feed. No food diary. It does not give medical advice.</dd>
+            </div>
+            <div>
+              <dt>What it costs</dt>
+              <dd>Pricing will be announced before launch.</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
-      <div class="phone-shell" aria-hidden="true">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-avatar"></div>
-          <div class="phone-bar"><span></span></div>
-          <div class="phone-bar"><span style="width: 45%;"></span></div>
-          <div class="phone-caption">Avatar · Week 12</div>
+    </div>
+  </section>
+
+  <!--
+    SCREENSHOTS GO HERE when they exist. Suggested markup, one figure per screen:
+    <section class="section" aria-labelledby="shots-title">
+      <div class="wrap">
+        <h2 id="shots-title">A look inside</h2>
+        <figure><img src="shots/today.png" width="1179" height="2556" alt="The Today screen with a planned workout"><figcaption>Today</figcaption></figure>
+      </div>
+    </section>
+    Images must be local files in this repo (no other hosts). Describe each screen in its alt text.
+  -->
+
+  <!-- 2. Where your data is stored: the piece people most want and most often cannot find. -->
+  <section class="section data-band" id="data" aria-labelledby="data-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Your data</p>
+        <h2 id="data-title">Where your data is stored</h2>
+        <p class="lede">The short answer: on your phone, and nowhere else.</p>
+      </div>
+      <ul class="data-list">
+        <li>
+          <span class="tag">Stays on your phone</span>
+          <h3>Your training log</h3>
+          <p>Every workout, set, weigh-in, goal and setting is saved on your phone. There is no account and no server. We cannot see your data, and we never have a copy.</p>
+        </li>
+        <li>
+          <span class="tag tag-choice">Only if you connect it</span>
+          <h3>Apple Health</h3>
+          <p>Apple Health is off until you connect it. Then the app can read your weight, a few body details and cardio from other apps. It adds your finished workouts and weigh-ins to Health. You choose what it may read, and you can disconnect at any time.</p>
+        </li>
+        <li>
+          <span class="tag tag-choice">Only if you turn it on</span>
+          <h3>Crash reports</h3>
+          <p>Crash reports are off unless you switch them on in Settings. If you do, a crash sends a technical report to Sentry, a crash service hosted in the EU. It holds your device model and app version. It never holds your name, your workouts or your Health data.</p>
+        </li>
+        <li>
+          <span class="tag tag-choice">Only if you send it</span>
+          <h3>Backups and spreadsheets</h3>
+          <p>The app saves backups on your phone. You can also make a spreadsheet of your log. A file only leaves your phone when you send it yourself, for example by email or AirDrop.</p>
+        </li>
+      </ul>
+      <p class="plain-note">
+        There are no adverts, no analytics and no tracking in the app. Reminders are set on the
+        phone itself, so we never know when one goes off. The full detail is in the
+        <a href="gymtracker-privacy.html">GymTracker privacy policy</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. What it does: seven groups, one line each, depth on request. -->
+  <section class="section" id="features" aria-labelledby="features-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What it does</p>
+        <h2 id="features-title">Seven things GymTracker does</h2>
+        <p>One line each. Open &ldquo;In detail&rdquo; if you want to know more.</p>
+      </div>
+
+      <ul class="features">
+        <li class="feature">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 9l2 2 4-4M8 15.5h8"/></svg></span>
+            <div>
+              <h3>Log a workout</h3>
+              <p>Tick off each set as you go. The app keeps count.</p>
+            </div>
+          </div>
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>Each set records the weight and the reps. You can also rate how hard it felt, from 5 to 10.</li>
+              <li>Ticking a set starts a rest timer. It aims for 90 seconds on big lifts and 60 on single-muscle moves. You can change it.</li>
+              <li>Mark a set as a warm-up. It stays in your log but never counts toward records.</li>
+              <li>For runs, rides, rows, swims and walks, log the time and distance. The app shows your pace.</li>
+              <li>Nothing planned today? Quick Start begins any routine.</li>
+              <li>Your workout shows on the Lock Screen and in the Dynamic Island. On iOS 17 or later you can log the set, skip a rest or add 30 seconds from there.</li>
+              <li>If you like, the app can say out loud when your rest is over.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="feature">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 15h2M14 15h2"/></svg></span>
+            <div>
+              <h3>Plan your weeks</h3>
+              <p>Set a goal or pick a program, and your calendar fills in.</p>
+            </div>
+          </div>
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>A goal says what you are working towards, and by when. The app picks a program to match.</li>
+              <li>You choose the days you can train. Sessions only go on those days.</li>
+              <li>Tell the app what equipment you have, or pick &ldquo;just my body&rdquo;. It only suggests what you can do.</li>
+              <li>Missing a piece of kit today? Swap the exercise for one that works the same muscles.</li>
+              <li>Tell it which areas are sore or injured. It stops suggesting them, but never stops you.</li>
+              <li>The calendar marks each day: &#10003; done, &#10005; missed, &#10010; sick day, or skipped.</li>
+              <li>A short weekly check-in asks how it is going. Nothing changes unless you choose.</li>
+              <li>A weight goal shows a rough daily calorie figure. It is an estimate, not advice, and there is no food diary.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="feature">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 7.5v9M3.5 10v4M18 7.5v9M20.5 10v4M6 12h12"/></svg></span>
+            <div>
+              <h3>Find exercises</h3>
+              <p>413 exercises, each with a short demo video.</p>
+            </div>
+          </div>
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>Every built-in exercise has a looping demo clip. The clips are inside the app, so they play without internet.</li>
+              <li>A body figure shows which muscles each exercise works.</li>
+              <li>Each exercise is marked Compound, Isolation or Cardio.</li>
+              <li>Search the Library for exercises, routines and programs in one box.</li>
+              <li>Use the built-in routines and programs, or copy one and make it your own.</li>
+              <li>Add your own exercises and routines.</li>
+              <li>Share a routine you made with a friend as a small file. It holds the routine and nothing personal.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="feature">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16M7 16.5v-4M12 16.5V7M17 16.5v-6.5"/></svg></span>
+            <div>
+              <h3>See your progress</h3>
+              <p>Clear charts of the work you have done.</p>
+            </div>
+          </div>
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>Last 7 days: one bar for each day&rsquo;s work. Drag it to look further back.</li>
+              <li>Muscle effort: a front and back body figure. Each muscle is coloured by how much work it got over the last 4 weeks.</li>
+              <li>Weight chart: your weigh-ins on a timeline, with the healthy range for your height.</li>
+              <li>Personal records: your heaviest weight, most reps, and estimated one-rep max. For cardio, your longest distance and fastest pace.</li>
+              <li>Streaks count the weeks you trained without missing a planned workout. A sick day freezes a streak instead of breaking it.</li>
+              <li>Awards: medals and trophies. Once you earn one, it is never taken back.</li>
+              <li>A weekly review, and a training profile with six readings on one chart.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="feature companion">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.1 5.4L19.5 10l-5.4 2.1L12 17.5l-2.1-5.4L4.5 10l5.4-1.6z"/><path d="M18.5 16.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span>
+            <div>
+              <h3>Your companion</h3>
+              <p>Pick a little creature. It grows as you keep training, never from your weight.</p>
+            </div>
+          </div>
+
+          <ol class="levels" aria-label="The six levels">
+            <li><span class="bar" style="--n:0" aria-hidden="true"></span><b>Level 1</b>When you pick it</li>
+            <li><span class="bar" style="--n:1" aria-hidden="true"></span><b>Level 2</b>First good week</li>
+            <li><span class="bar" style="--n:2" aria-hidden="true"></span><b>Level 3</b>4 good weeks</li>
+            <li><span class="bar" style="--n:3" aria-hidden="true"></span><b>Level 4</b>10 good weeks</li>
+            <li><span class="bar" style="--n:4" aria-hidden="true"></span><b>Level 5</b>20 good weeks</li>
+            <li><span class="bar" style="--n:5" aria-hidden="true"></span><b>Level 6</b>48 good weeks</li>
+          </ol>
+          <p class="levels-caption">A good week is a week with workouts on at least two different days. The weeks do not have to be in a row.</p>
+
+          <ul class="names" aria-label="The eleven companions">
+            <li>Rivet</li><li>Cinder</li><li>Grit</li><li>Bram</li><li>Rin</li><li>Oren</li>
+            <li>Lumi</li><li>Kael</li><li>Pip</li><li>Elowen</li><li>Ash</li>
+          </ul>
+
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>There are eleven companions, from a scrap-can robot to a flower fairy and a wolf pup. Each has its own voice.</li>
+              <li>Level 2 also comes after three workout days within any seven days. The top level takes about a year.</li>
+              <li>A level only ever goes up. Switching to another companion keeps the level you reached.</li>
+              <li>Your weight, your loads and how you look never change it. Only how often you train does.</li>
+              <li>It has a mood. After a break it gets sleepy, but it never scolds you. One workout wakes it up.</li>
+              <li>It speaks in a small speech cloud when something happens, like a new record. Tap it to hear more.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="feature">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M12 7v6.5M9 10.5l3 3 3-3M10 18.5h4"/></svg></span>
+            <div>
+              <h3>Your data, your way</h3>
+              <p>Back up, restore, and take your log with you.</p>
+            </div>
+          </div>
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>The app backs itself up a few seconds after you log or change a set. It keeps the last 7 backups on your phone.</li>
+              <li>Tap Back up now in Settings whenever you like.</li>
+              <li>Restore puts a backup back. It saves a rescue copy of what was there first.</li>
+              <li>Export a spreadsheet of everything you have logged. Email it, or save it to Files.</li>
+              <li>Import a spreadsheet the app made, on this phone or a new one. It adds what is new and changes nothing else.</li>
+              <li>Connect Apple Health if you want to, and disconnect it at any time.</li>
+            </ul>
+          </details>
+        </li>
+
+        <li class="feature">
+          <div class="feature-head">
+            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></svg></span>
+            <div>
+              <h3>Small touches</h3>
+              <p>Celebrations, gentle reminders and plain-English help.</p>
+            </div>
+          </div>
+          <details>
+            <summary>In detail</summary>
+            <ul class="detail-list">
+              <li>A small celebration when you set a personal record or reach a streak milestone.</li>
+              <li>Seasonal looks for nine festivals in the year, such as Halloween, Diwali and Christmas. Only for the ones you tick.</li>
+              <li>Optional reminders for a weekly weigh-in, the weekly check-in, and a long break from training.</li>
+              <li>A built-in glossary explains every term the app uses, in plain words.</li>
+              <li>It all works without internet.</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Who it is for, and who it is not for. -->
+  <section class="section" id="fit" aria-labelledby="fit-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Is it for you?</p>
+        <h2 id="fit-title">Who GymTracker is for</h2>
+      </div>
+      <div class="fit">
+        <div>
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A good fit if you</h3>
+          <ul>
+            <li>want a simple log that stays private</li>
+            <li>lift weights, do cardio, or both</li>
+            <li>train at a gym, at home, or with just your body</li>
+            <li>are just starting out, or have trained for years</li>
+            <li>like to see your work add up over time</li>
+          </ul>
+        </div>
+        <div class="not">
+          <h3><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>Not the right app if you want</h3>
+          <ul>
+            <li>a social feed, or to follow friends online</li>
+            <li>a personal coach or medical advice</li>
+            <li>to log your food or count calories</li>
+            <li>your data in the cloud, shared across devices</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="features">
+  <!-- 5. Questions a careful buyer asks. -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
-      <h2 class="section-heading">Built for people who actually lift</h2>
-      <p class="section-sub">
-        No feeds, no followers, no ads. Just the tools to train well and a clear picture
-        of how far you've come.
-      </p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"></div>
-          <h3>413-exercise library</h3>
-          <p>Every movement comes with a professionally filmed demo video, so you always know the correct form.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"></div>
-          <h3>Research-backed programs</h3>
-          <p>Routines and multi-week programs built on established training science, not guesswork.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"></div>
-          <h3>Personal-record celebrations</h3>
-          <p>GymTracker notices when you hit a new best and makes sure you feel it in the moment.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"></div>
-          <h3>An avatar that grows with you</h3>
-          <p>A visual representation of your body that changes shape as your real-world training progresses.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"></div>
-          <h3>Works fully offline</h3>
-          <p>No connection required at the gym. Log sets, watch demos, and review programs anywhere.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon" aria-hidden="true"></div>
-          <h3>Your data never leaves your phone</h3>
-          <p>No account, no cloud sync, no analytics. Your training history is yours alone.</p>
-        </div>
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-title">Questions people ask</h2>
       </div>
-    </div>
-  </section>
+      <div class="faq">
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. You open the app and start. There is nothing to sign up for, and we never ask for your email.</p>
+        </details>
+        <details>
+          <summary>Where is my data kept?</summary>
+          <p>On your phone. We have no server, so your data never reaches us. It only leaves your phone if you send a file yourself, or if you turn on crash reports. Crash reports never include your training data.</p>
+        </details>
+        <details>
+          <summary>Does it work without internet?</summary>
+          <p>Yes. Everything works offline, including the exercise videos.</p>
+        </details>
+        <details>
+          <summary>Does it use Apple Health?</summary>
+          <p>Only if you connect it. It can then read your weight, a few body details and cardio from other apps. It can also add your workouts and weigh-ins to Health. You choose what it may read, and you can disconnect at any time.</p>
+        </details>
+        <details>
+          <summary>What if I lose my phone, or get a new one?</summary>
+          <p>We cannot get your data back for you, because we never have it. Your iPhone&rsquo;s own backup includes the app&rsquo;s data. To keep a copy somewhere else, export a spreadsheet. On a new phone, import that spreadsheet to bring your log back.</p>
+        </details>
+        <details>
+          <summary>Is it medical advice?</summary>
+          <p>No. GymTracker is for general fitness. If you have a health condition or an injury, talk to a doctor before you start a new exercise plan.</p>
+        </details>
+        <details>
+          <summary>How much does it cost, and when is it out?</summary>
+          <p>The app is still in development. Pricing will be announced before launch. <a href="mailto:support@kalikoutsi.com?subject=GymTracker%20launch">Email us</a> and we will tell you when it is on the App Store.</p>
+        </details>
+        <details>
+          <summary>How do I get help?</summary>
+          <p>Email <a href="mailto:support@kalikoutsi.com">support@kalikoutsi.com</a>. Inside the app, the glossary explains every term in plain words.</p>
+        </details>
+      </div>
 
-  <section class="waitlist">
-    <div class="wrap">
-      <div class="waitlist-card">
-        <h2>Be first to know when GymTracker launches</h2>
-        <p>We're putting the finishing touches on the App Store release. Drop your email and we'll let you know the moment it's live — nothing else, ever.</p>
-        <a class="btn btn-primary" href="mailto:support@kalikoutsi.com?subject=GymTracker%20waitlist">
-          Join the waitlist
-        </a>
+      <div class="legal-links">
+        <a class="btn btn-quiet" href="gymtracker-privacy.html">Privacy policy</a>
+        <a class="btn btn-quiet" href="gymtracker-terms.html">Terms of use</a>
       </div>
-    </div>
-  </section>
-  <section class="app-legal">
-    <div class="wrap">
-      <h2>The legal bit</h2>
-      <p>
-        GymTracker keeps your training on your phone. These two pages say exactly what that
-        means, and what the app does and does not promise.
-      </p>
-      <p class="app-legal-links">
-        <a href="gymtracker-privacy.html">Privacy Policy</a>
-        <a href="gymtracker-terms.html">Terms of Use</a>
-      </p>
-      <p class="app-legal-note">
-        GymTracker is for general fitness. Nothing in it is medical advice — see the Terms.
-      </p>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer">
-      <a href="index.html">Kalikoutsi</a>
-      <a href="gymtracker.html">GymTracker</a>
-    </nav>
-    <p class="footer-copy">© 2026 Kalikoutsi · support@kalikoutsi.com</p>
+    <div class="footer-top">
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9"/><path d="M12 9v14M21.5 9l-7 7 7 7"/></svg>
+        <span>Kalikoutsi</span>
+      </a>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html#apps">Apps</a></li>
+          <li><a href="gymtracker-privacy.html">GymTracker privacy policy</a></li>
+          <li><a href="gymtracker-terms.html">GymTracker terms of use</a></li>
+          <li><a href="mailto:support@kalikoutsi.com">support@kalikoutsi.com</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="legal">KALIKOUTSI LIMITED is a private limited company registered in England and Wales, company number 17479521. Registered office: White House, Wollaton Street, Nottingham, United Kingdom, NG1 5GF.</p>
+    <p class="fine">&copy; 2026 Kalikoutsi Limited. This website sets no cookies and loads nothing from other websites.</p>
   </div>
 </footer>
 

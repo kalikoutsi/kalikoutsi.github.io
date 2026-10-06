@@ -1,50 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kalikoutsi</title>
-<meta name="description" content="Kalikoutsi is a small studio building simple, privacy-first apps. Every app works offline, and your data stays on your device.">
+<title>Kalikoutsi: mobile apps, made in the UK</title>
+<meta name="description" content="Kalikoutsi is a small UK software company. We design and build mobile apps that keep your data on your device, with no accounts, no ads and no tracking.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230b6b5c'/%3E%3Cpath d='M12 9v14M21.5 9l-7 7 7 7' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Kalikoutsi — Home">
-      <span class="brand-mark" aria-hidden="true"></span>
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9"/><path d="M12 9v14M21.5 9l-7 7 7 7"/></svg>
+      <span>Kalikoutsi</span>
     </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html" aria-current="page">Kalikoutsi</a>
-      <a href="gymtracker.html">GymTracker</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#apps">Apps</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<main>
-  <section class="company-hero">
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
-      <h1>Kalikoutsi</h1>
-      <p class="lede">
-        A small studio making apps that stay out of your way. Everything works offline,
-        and your data never leaves your device.
+      <p class="eyebrow rise">Kalikoutsi &middot; Software company</p>
+      <h1 id="hero-title" class="rise" style="--i:1">We build mobile apps <em>with care.</em></h1>
+      <p class="lede rise" style="--i:2">
+        Kalikoutsi is a small software company based in the United Kingdom. We design and build
+        apps for your phone. We care about the people who use them, and about their privacy.
       </p>
+      <ul class="hero-meta rise" style="--i:3" aria-label="About us">
+        <li class="chip"><span class="chip-dot" aria-hidden="true"></span>Based in the UK</li>
+        <li class="chip"><span class="chip-dot" aria-hidden="true"></span>Mobile apps</li>
+        <li class="chip"><span class="chip-dot" aria-hidden="true"></span>Private by design</li>
+      </ul>
     </div>
   </section>
 
-  <section class="apps-section">
+  <section class="section" aria-labelledby="how-title">
     <div class="wrap">
-      <h2 class="section-heading">Apps</h2>
-      <p class="section-sub">One app so far. More when they're ready.</p>
-      <div class="app-grid">
-        <div class="app-card">
-          <div class="app-card-head">
-            <img class="icon-img icon-img--sm" src="gymtracker-icon.png" width="256" height="256" alt="GymTracker app icon">
+      <div class="section-head">
+        <p class="eyebrow">How we work</p>
+        <h2 id="how-title">Three plain promises</h2>
+      </div>
+      <ol class="principles">
+        <li>
+          <h3>Your data stays on your device</h3>
+          <p>What you put into our apps is saved on your phone. We do not collect it, so we cannot see it.</p>
+        </li>
+        <li>
+          <h3>No accounts, no ads, no tracking</h3>
+          <p>You do not sign up to use our apps. There are no adverts, and nothing watches what you do.</p>
+        </li>
+        <li>
+          <h3>We say plainly what an app does</h3>
+          <p>Each app page says what the app does, what it does not do, and where your data goes.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="apps" aria-labelledby="apps-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Apps</p>
+        <h2 id="apps-title">What we make</h2>
+      </div>
+      <ul class="app-grid">
+        <li class="app-card">
+          <img class="app-icon" src="gymtracker-icon.png" width="192" height="192" alt="">
+          <div>
+            <span class="app-status">iPhone &middot; In development</span>
             <h3>GymTracker</h3>
           </div>
-          <p>Track your workouts with an avatar that evolves with your real progress.</p>
-          <a class="app-link" href="gymtracker.html">Open GymTracker →</a>
-        </div>
+          <div class="app-body">
+            <p>Log your workouts, plan your weeks and watch a small companion grow as you train. Everything stays on your phone.</p>
+            <a class="more" href="gymtracker.html">Learn more about GymTracker <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </li>
+        <li class="app-soon">
+          <strong>More apps are on the way.</strong>
+          <p>They will appear here when they are ready.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Say hello</h2>
+        <p>Questions, ideas or feedback about any of our apps? Send us an email.</p>
+        <a class="big-link" href="mailto:support@kalikoutsi.com">support@kalikoutsi.com</a>
       </div>
     </div>
   </section>
@@ -52,11 +108,22 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Footer">
-      <a href="index.html">Kalikoutsi</a>
-      <a href="gymtracker.html">GymTracker</a>
-    </nav>
-    <p class="footer-copy">© 2026 Kalikoutsi · support@kalikoutsi.com</p>
+    <div class="footer-top">
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="9"/><path d="M12 9v14M21.5 9l-7 7 7 7"/></svg>
+        <span>Kalikoutsi</span>
+      </a>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html#apps">Apps</a></li>
+          <li><a href="gymtracker-privacy.html">GymTracker privacy policy</a></li>
+          <li><a href="gymtracker-terms.html">GymTracker terms of use</a></li>
+          <li><a href="mailto:support@kalikoutsi.com">support@kalikoutsi.com</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="legal">KALIKOUTSI LIMITED is a private limited company registered in England and Wales, company number 17479521. Registered office: White House, Wollaton Street, Nottingham, United Kingdom, NG1 5GF.</p>
+    <p class="fine">&copy; 2026 Kalikoutsi Limited. This website sets no cookies and loads nothing from other websites.</p>
   </div>
 </footer>
 
