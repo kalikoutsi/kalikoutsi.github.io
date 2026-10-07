@@ -491,6 +491,85 @@ a:hover { color: var(--accent-hover); text-decoration-thickness: 2px; }
 .glance dt { font-size: var(--t-sm); font-weight: 600; color: var(--ink-3); }
 .glance dd { margin: 0; }
 
+/* ---------- Screens: phone frames drawn in CSS (no device mockups) ---------- */
+
+.gallery {
+  list-style: none;
+  padding: var(--s1) var(--gutter) var(--s2);
+  margin: 0 calc(-1 * var(--gutter));
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(72%, 280px);
+  gap: var(--s3);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+}
+.gallery > li { scroll-snap-align: start; }
+@media (min-width: 64rem) {
+  .gallery {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(5, 1fr);
+    overflow: visible;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+}
+
+.gallery figure, .shot-side { margin: 0; }
+
+.phone,
+.shot-phone .frame {
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.phone img,
+.shot-phone .frame img {
+  width: 100%;
+  border-radius: 26px;
+  background: var(--surface-alt);
+}
+
+.shot-crop .frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.shot-crop .frame img { width: 100%; }
+
+.gallery figcaption,
+.shot-side figcaption {
+  margin-top: var(--s2);
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  color: var(--ink-2);
+  text-align: center;
+}
+
+.has-shot .shot-side {
+  width: 100%;
+  max-width: 240px;
+  margin: var(--s3) auto 0;
+}
+.has-shot .shot-crop { max-width: 340px; }
+@media (min-width: 48rem) {
+  .feature.has-shot {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: var(--s5);
+    align-items: start;
+  }
+  .feature.has-shot:has(.shot-crop) { grid-template-columns: 1fr 320px; }
+  .has-shot .shot-side { margin: 0; max-width: none; }
+}
+
 /* ---------- Where your data is stored ---------- */
 
 .data-list {
@@ -593,8 +672,9 @@ summary:hover { color: var(--accent-hover); }
 
 /* ---------- Companion: growth and the roster ---------- */
 
-.companion-block { margin-top: var(--s4); }
-.companion-block h4 {
+.companion-card { padding: var(--s3); }
+@media (min-width: 48rem) { .companion-card { padding: var(--s4); } }
+.companion-block h3 {
   margin: 0 0 var(--s2);
   font-size: var(--t-sm);
   font-weight: 600;
