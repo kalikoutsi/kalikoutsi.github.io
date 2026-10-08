@@ -482,6 +482,29 @@ a:hover { color: var(--accent-hover); text-decoration-thickness: 2px; }
 
 .cta-note { margin-top: var(--s2); font-size: var(--t-sm); color: var(--ink-3); }
 
+/* Store buttons. Placeholders until the listings exist: same shape as the real badges,
+   no link, a "Coming soon" line instead of "Download on the". */
+.store-buttons { display: flex; flex-wrap: wrap; gap: var(--s2); margin: var(--s3) 0 var(--s4); }
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 18px 0 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--bg);
+  text-decoration: none;
+  line-height: 1.1;
+}
+.store-btn svg { width: 26px; height: 26px; fill: currentColor; flex: none; }
+.store-btn small { display: block; font-size: 11px; letter-spacing: .02em; opacity: .8; }
+.store-btn strong { display: block; font-size: 17px; font-weight: 600; }
+.store-btn[aria-disabled="true"] { opacity: .6; cursor: default; }
+@media (prefers-color-scheme: dark) { .store-btn { background: var(--surface-alt, #182129); color: var(--ink); } }
+
+
 /* At a glance */
 .glance { padding: var(--s4); }
 .glance h2 { font-size: var(--t-lg); margin-bottom: var(--s3); }
