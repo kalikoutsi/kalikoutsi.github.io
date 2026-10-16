@@ -710,10 +710,10 @@ summary:hover { color: var(--accent-hover); }
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--s3) var(--s2);
 }
-@media (min-width: 40rem) { .levels { grid-template-columns: repeat(6, 1fr); } }
+@media (min-width: 40rem) { .levels { grid-template-columns: repeat(4, 1fr); } }
 
 .levels li { text-align: center; font-size: var(--t-sm); color: var(--ink-2); line-height: 1.4; }
 .levels img {
