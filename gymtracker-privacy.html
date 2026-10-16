@@ -22,12 +22,12 @@
 <main id="main" class="content-page">
   <div class="wrap">
     <h1>GymTracker Privacy Policy</h1>
-    <p class="updated">Last updated: 15 September 2026</p>
+    <p class="updated">Last updated: 16 October 2026</p>
 
     <p>
-      This policy covers the GymTracker iOS app, published by Kalikoutsi. The companion
-      <a href="gymtracker-terms.html">Terms of Use</a> cover what the app does and does not
-      promise.
+      This policy covers the GymTracker app for iPhone, iPad and Android, published by
+      Kalikoutsi. The companion <a href="gymtracker-terms.html">Terms of Use</a> cover what
+      the app does and does not promise.
     </p>
 
     <p>
@@ -40,8 +40,8 @@
     <h2>What stays on your device</h2>
     <p>
       Your workouts, sets, reps and loads; your exercise history; your body weight and other
-      body metrics; your goals, programs and calendar; your avatar and awards; and every
-      setting you choose. All of it is stored in a database on the device itself. We operate
+      body metrics; your goals, programs and calendar; your companion, its levels and your
+      awards; and every setting you choose. All of it is stored in a database on the device itself. We operate
       no server that receives it, we cannot see it, and we have no way to retrieve it — which
       also means we cannot recover it for you if you lose the device without a backup.
     </p>
@@ -67,11 +67,16 @@
       Settings. You can switch it off again at any time.
     </p>
     <p>
-      When it is on, a crash sends the stack trace, your device model, and the OS and app
-      version to Sentry, hosted in the European Union. It does not include your name, email,
-      IP address or any account identifier — there is no account — and it carries no workout
-      data and no body metrics. There is no performance tracing, no session replay and no
-      usage analytics: a crash is the only event that causes a request.
+      When it is on, a crash — or the app freezing for several seconds — sends a report to
+      Sentry, a crash-reporting service hosted in the European Union. The report holds the
+      stack trace, your device model, the OS and app version, the names of the screens and
+      controls used in the moments before the fault, and a random identifier the app makes
+      for itself so that one device hitting the same fault twice counts once. It does not
+      include your name, email address or any account identifier — there is no account — and
+      it carries no workout data, no body metrics and nothing from Apple Health. There is no
+      session replay and no usage analytics: a fault is the only thing that causes a request.
+      Sentry keeps a report for up to 90 days and then deletes it; we do not copy reports
+      anywhere else.
     </p>
     <p>
       The app also keeps a crash log on the device itself, to show you what went wrong. That
@@ -83,7 +88,7 @@
       GymTracker can write a backup file, and can export your training history as a
       spreadsheet. Both happen only when you ask for them. The app hands the file to your
       device's own share sheet and you choose where it goes — Files, Mail, AirDrop or
-      anywhere else iOS offers. We operate no cloud storage and the file is never uploaded to
+      anywhere else your phone offers. We operate no cloud storage and the file is never uploaded to
       us. Once you have sent it somewhere, what happens to it is governed by whichever
       service you sent it to, not by this policy.
     </p>
@@ -97,12 +102,24 @@
 
     <h2>Health data</h2>
     <p>
-      GymTracker never touches Apple Health until you connect it in Settings, and you can
-      disconnect at any time. When connected, it reads your weight, height, date of birth and
+      On iPhone, GymTracker never touches Apple Health until you connect it in Settings, and
+      you can disconnect at any time. On Android there is no health-platform connection. When connected, it reads your weight, height, date of birth and
       sex, and your workouts, and it writes the workouts and weigh-ins you record in GymTracker
       back to Health. Readings taken from Health are shown in the app but are not kept in the
       app's own database, its backups or its spreadsheet exports; only what you type into
       GymTracker is stored. Nothing from Health ever leaves your phone through GymTracker.
+    </p>
+
+    <h2>Not medical advice</h2>
+    <p>
+      GymTracker provides general training and nutrition guidance to help you plan and track
+      your activity. It does not assess injuries and it does not provide medical advice,
+      diagnosis or treatment. If you are injured, ill, pregnant or recovering, talk to a
+      doctor before starting or changing your training, and follow the advice of your doctor
+      or physiotherapist over anything the app suggests. Talk to a doctor or dietitian before
+      making changes to what you eat that could affect your health. The app applies more
+      cautious limits where it can, but it cannot know your medical history, and you use its
+      suggestions at your own judgement.
     </p>
 
     <h2>Your rights over your data</h2>
