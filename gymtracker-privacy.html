@@ -32,9 +32,10 @@
 
     <p>
       The short version: GymTracker has no account, no server, and nothing to sign up for.
-      Everything you record lives on your phone, and the only things that can ever leave it
-      are a crash report you have switched on, a spreadsheet you have asked to export, and a
-      routine, program or progress card you have chosen to share.
+      Your records are stored on your phone, and your phone's own backup service may keep a
+      copy of them. You can choose to send crash reports, export a spreadsheet, or share a
+      routine, a program or a progress card. If you connect Apple Health, GymTracker also
+      writes your workouts and weigh-ins there.
     </p>
 
     <h2>What stays on your device</h2>
@@ -70,13 +71,12 @@
       When it is on, a crash — or the app freezing for several seconds — sends a report to
       Sentry, a crash-reporting service hosted in the European Union. The report holds the
       stack trace, your device model, and the OS and app version. It may also carry a short
-      trail of the screens and buttons used just before the fault, and a random ID the crash
-      library makes so that one device hitting the same fault twice counts once. It does not
-      include your name, email address or any account identifier — there is no account — and
-      it carries no workout data, no body metrics and nothing from Apple Health. There is no
-      session replay and no usage analytics: a fault is the only thing that causes a request.
-      Reports stay in Sentry for a limited time and are then deleted; we do not copy them
-      anywhere else.
+      trail of the screens and buttons used just before the fault, and a random ID that can
+      link reports from the same app installation. The app does not attach your workout log,
+      your body metrics or your Health records, and there is no account, so no name, email
+      address or account identifier. A report can include screen titles, so a routine or
+      exercise name you typed may appear in one. There is no session replay and no usage
+      analytics: a fault is the only thing that causes a request.
     </p>
     <p>
       The app also keeps a crash log on the device itself, to show you what went wrong. That
@@ -103,11 +103,13 @@
 
     <h2>Sharing a routine or a progress card</h2>
     <p>
-      Share, on a routine or program you made, writes a small file holding its exercises,
-      sets and reps, plus any exercise you made up — nothing about you and none of your
-      workouts — and hands it to the share sheet. Older versions sent a link, which still
-      opens the same way. Share my progress, on the Progress tab, sends a short message, or a
-      card you can screenshot. Both happen only when you tap Share, and once something is
+      Share, on a routine or program you made, writes a small file holding the names you
+      typed, its exercises and their order, the sets, reps or cardio minutes, the Difficulty,
+      a program's planned weekdays, and any exercise you made up with its name and muscle
+      groups — but none of your logged workouts — and hands it to the share sheet. Older
+      versions sent a link, which still opens the same way. Share my progress, on the Progress
+      tab, sends the card as an image on iPhone; on Android, or if the image cannot be made,
+      it sends a short message. Both happen only when you tap Share, and once something is
       sent it cannot be taken back.
     </p>
 
@@ -120,8 +122,9 @@
 
     <h2>Health data</h2>
     <p>
-      On iPhone, GymTracker never touches Apple Health until you connect it in Settings, and
-      you can disconnect at any time. On Android there is no health-platform connection. When
+      On iPhone, GymTracker reads and writes Apple Health only after you choose to connect it,
+      during setup or in Settings, and you can disconnect in Settings at any time. On Android
+      there is no health-platform connection. When
       connected, it reads your weight and weight history, your body fat and lean mass if
       something measures them, your height, sex and date of birth, and the walking, running,
       cycling and other cardio Health already knows about; it writes the workouts and
@@ -129,9 +132,11 @@
       in your weight log but never stored by the app, so they are not in its backups or its
       spreadsheet export. Your height, date of birth, sex, body fat and lean mass are copied
       into your profile while Health is connected, each marked with where it came from; they
-      stay in the profile if you disconnect, and you can change them by hand. Because they
-      are part of your profile, those copied values are in your backups and your spreadsheet
-      export. GymTracker itself never sends anything read from Health anywhere.
+      stay in the profile if you disconnect, and you can change them by hand. All five copied
+      values are kept in your backups; the spreadsheet export includes your height, date of
+      birth and sex, but not your body fat or lean mass. So if you share a spreadsheet, it can
+      include those three details copied from Health, and your phone's own backup may hold the
+      stored profile too. GymTracker itself sends nothing from Health to us or to anyone.
     </p>
 
     <h2>Not medical advice</h2>
@@ -153,7 +158,7 @@
     </p>
     <ul>
       <li><strong>Access and portability</strong> — Settings › Data › Export a spreadsheet gives you your log, profile, goals, schedule, settings and the things you made, in a format other software can open.</li>
-      <li><strong>Erasure</strong> — Settings › Data › Reset all data deletes your log, profile and settings; it takes one backup first, which is one of the seven the app keeps, so newer backups replace it in time. Deleting the app deletes everything, backups included.</li>
+      <li><strong>Erasure</strong> — Settings › Data › Reset all data deletes your training records and profile but keeps preferences such as units, appearance and crash reporting. It saves a backup first and leaves existing backups in place: the app keeps seven ordinary backups and up to two separate rescue copies. Deleting the app deletes everything, backups included.</li>
       <li><strong>Rectification</strong> — every value you have entered can be edited in the app.</li>
     </ul>
     <p>
