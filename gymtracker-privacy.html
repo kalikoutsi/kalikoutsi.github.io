@@ -89,10 +89,11 @@
       GymTracker backs itself up on its own, about five seconds after you log, change or
       delete a set, and whenever you tap Back up now. The last seven backups are kept inside
       the app, where only GymTracker can open them: the Files app does not show them, and on
-      iPhone they are left out of iCloud backup because they can hold readings that came from
-      Apple Health. Your phone's own backup still includes the app. Before a restore or an
-      import, the app saves a rescue copy the same way; before a reset it takes one more
-      backup.
+      iPhone they are left out of iCloud backup on purpose, because they are a complete copy
+      of your log and the app keeps that under your own control through Settings › Data. Your
+      phone's own backup still includes the app itself, apart from the values copied from
+      Apple Health (see Health data below). Before a restore or an import, the app saves a
+      rescue copy the same way; before a reset it takes one more backup.
     </p>
     <p>
       Export a spreadsheet writes your training history as a file and hands it to your
@@ -133,11 +134,12 @@
       in your weight log but never stored by the app, so they are not in its backups or its
       spreadsheet export. Your height, date of birth, sex, body fat and lean mass are copied
       into your profile while Health is connected, each marked with where it came from; they
-      stay in the profile if you disconnect, and you can change them by hand. All five copied
-      values are kept in your backups; the spreadsheet export includes your height, date of
-      birth and sex, but not your body fat or lean mass. So if you share a spreadsheet, it can
-      include those three details copied from Health, and your phone's own backup may hold the
-      stored profile too. GymTracker itself sends nothing from Health to us or to anyone.
+      stay in the profile if you disconnect, and you can change them by hand. The copied
+      values stay on this phone, outside iCloud backup, outside the app's own backups and
+      outside the spreadsheet export; restoring from iCloud or moving to a new iPhone leaves
+      those fields empty until the next sync with Health. A value you type yourself is yours:
+      it goes wherever the rest of your profile goes, including backups and the export.
+      GymTracker itself sends nothing from Health to us or to anyone.
     </p>
 
     <h2>Not medical advice</h2>
